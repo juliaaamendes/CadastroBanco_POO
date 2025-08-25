@@ -9,7 +9,6 @@ public class Cliente extends Pessoa {
 
     @Override
     public boolean gravar() {
-        // Validação do CPF antes de gravar
         if (getCpf() == null || getCpf().trim().isEmpty()) {
             System.out.println("Erro: CPF é obrigatório!");
             return false;

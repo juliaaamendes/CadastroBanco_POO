@@ -14,7 +14,6 @@ public class SistemaController {
 
     public void consultar() {
         System.out.println("Consultando dados...");
-        // Aqui viria a lógica de consulta no banco de dados
     }
 
     public void atualizar() {
@@ -31,7 +30,6 @@ public class SistemaController {
     }
 
     public void gravar() {
-        // Criar cliente a partir dos dados da janela
         cliente = new Cliente(
             janela.getJtfNome().getText(),
             janela.getJtfEndereco().getText(),
@@ -39,7 +37,6 @@ public class SistemaController {
             janela.getJtfCpf().getText()
         );
 
-        // Criar conta baseada na seleção
         if (janela.getJrbCorrente().isSelected()) {
             conta = new ContaCorrente(
                 janela.getJtfAgencia().getText(),
@@ -56,7 +53,6 @@ public class SistemaController {
             );
         }
 
-        // Gravar dados
         boolean clienteGravado = cliente.gravar();
         boolean contaGravada = conta.gravar();
 
@@ -78,7 +74,6 @@ public class SistemaController {
         }
     }
 
-    // Getters
     public Cliente getCliente() { return cliente; }
     public Conta getConta() { return conta; }
 }

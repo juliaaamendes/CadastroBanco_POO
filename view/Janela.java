@@ -1,13 +1,12 @@
 package view;
 
-import javax.swing.*;
+import controller.SistemaController;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import controller.SistemaController;
+import javax.swing.*;
 
 public class Janela extends JFrame {
-    // Atributos (mantenha todos os anteriores)
     private JTextField jtfAgencia, jtfConta, jtfNome, jtfEndereco, jtfTelefone, jtfCpf;
     private JRadioButton jrbCorrente, jrbPoupanca;
     private JButton jbConsultar, jbAtualizar, jbFechar;
@@ -35,8 +34,7 @@ public class Janela extends JFrame {
     }
 
     private void inicializarComponentes() {
-        // (Mantenha toda a inicialização anterior dos componentes)
-        // ... código de inicialização dos componentes ...
+
     }
 
     private void configurarEventos() {
@@ -61,7 +59,6 @@ public class Janela extends JFrame {
             }
         });
 
-        // Adicionar listener para gravar quando o formulário for preenchido
         JButton jbGravar = new JButton("Gravar");
         jbGravar.setBounds(10, 190, 100, 23);
         jbGravar.addActionListener(new ActionListener() {
@@ -73,7 +70,6 @@ public class Janela extends JFrame {
         getContentPane().add(jbGravar);
     }
 
-    // Getters para o controller acessar os componentes
     public JTextField getJtfAgencia() { return jtfAgencia; }
     public JTextField getJtfConta() { return jtfConta; }
     public JTextField getJtfNome() { return jtfNome; }
